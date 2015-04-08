@@ -1,0 +1,676 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: #CCC;
+	background-color: #CCC;
+	background-image: url(../images/bg_background_2.jpg) !important;
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+}
+html {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+.contentpagefooter {
+	margin-right: auto;
+	margin-left: auto;
+	width: 390px;
+	font-size: 70%;
+}
+#content .imagesheading {
+	font-weight: bold;
+	font-size: 120%;
+	font-variant: small-caps;
+	text-align: left;
+}
+.container #content .morserule {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p, q {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 10px;
+	padding-left: 10px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	font-family: Verdana, Geneva, sans-serif;
+	display: block;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+ a:link {
+	color: #09C; 
+	text-decoration: none;
+}
+a:visited {
+	color: #6E6C64;
+	[disabled]text-decoration: none; 
+} 
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color: #993;
+}
+/* ~~ this fixed width container surrounds all other elements ~~ */
+.container {
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	/* [disabled]position: relative; */
+	border: thin ridge #666;
+	margin-top:0;
+	margin-bottom:0;
+}
+.kaydat {
+ /*visibility:collapse;*/
+}
+#norfleet {
+	font-size: .8em;
+	font-style: italic;
+}
+#lselect a {
+}
+#linkList {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	float: right;
+	width: 30%;
+	padding-left: 0px;
+	font-size: 0.8em;
+	border-top-color: #333;
+	border-right-color: #333;
+	border-bottom-color: #333;
+	border-left-color: #333;
+	position: absolute;
+	left: 225px;
+	top: 82px;
+}
+#linkList ul {
+	margin-left: 35px;
+	padding-left: 10px;
+	list-style-image: none;
+	margin-top: 5px;
+}
+#linkList li {
+	margin-bottom: 10px;
+	line-height: 130%;
+	margin-right: 30px;
+	border: 2px solid #000;
+}
+#lselect {
+	background-image: url(../menu-back.png);
+	margin-bottom: 0px;
+	padding-bottom: 20px;
+	width: 200px;
+}
+#lselect h3 {
+	background-image: url(../select.png);
+	background-repeat: no-repeat;
+	height: 15px;
+	width: 200px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#lselect h3 span {
+	display: none;
+}
+#lselect a {
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	font-size: medium;
+	color: #900;
+	font-variant: small-caps;
+	border: .5px solid #000;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+#lselect a:hover {
+	color: #333333;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-decoration: underline;
+}
+#lselect li {
+	font-style: italic;;
+}
+#lselect .c {
+	display: inline;
+}
+#lselect a.c {
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+}
+#rightcolumn {
+	width: 500px;
+	padding: 0px;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+#leftcolumn {
+	width: 100px;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+.container > #content {
+	background-color: #FFF;
+	overflow: hidden;
+	/*	left: 429px; */
+	right: auto;
+	left: auto;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	font-size: 100%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 200px;
+	box-shadow: 0px -4px 9px 2px #333;
+	max-width: 75%;
+	position:relative;
+	top: 3.5em;
+	border: medium double #CCC;
+}
+#content .title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 160%;
+	text-align: center;
+}
+#content p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+}
+#contentheaderTop {
+	position: absolute;
+	left: 329px;
+	height: 79px;
+	background-image: url(../images/Dashboard_Content-Top.png);
+	width: 702px;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+#contentheaderleftTop {
+	position: absolute;
+	top: 167px;
+	left: 230px;
+	height: 109px;
+	background-image: url(../images/Altimeter.png);
+	width: 99px;
+	z-index: 2;
+}
+#extraDiv2 {
+	background-image: url(../images/african-americans-wwii-1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	height: 275px;
+	width: 100%;
+	position: fixed;
+	bottom: -25px;
+	z-index: 1;
+}
+.Quote-we_have-a-right-to-fight {
+	height: 40%;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	font-variant: small-caps;
+	text-align: center;
+}
+
+.Quote-Mark {
+	font-size: 400%;
+	color: #D4303A;
+}
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+	margin-top: 0px;
+}
+.imagesnames {
+	position: absolute;
+	top: 40%;
+	right: 10%;
+}
+.images {
+	position: relative;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+h2 {
+	font-weight: bold;
+	font-variant: small-caps;
+	font-family: 'major_shift';
+	font-size: 140%;
+	appearance: signature;
+}
+h1 {
+	font-family: 'major_shift';
+	font-size: 300%;
+	text-align: center;
+	margin:0;
+}
+img {
+	display: block;
+	margin: 0px;
+	/* [disabled]padding-left: 5px; */
+}
+.imgNoLeftMargin {
+	margin-left:0px;
+}
+.thickrule {
+	border-bottom-width: thick;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+}
+.firstparagraph {
+	font-variant: small-caps;
+}
+#firstparagraph {
+	font-variant: small-caps;
+}
+#footer {
+	bottom: 10px;
+	color:#fff;
+	font-family:courier,"lucinda console", monaco;
+	position: fixed;
+	z-index:5;
+}  
+#footer a {
+	color:#fff;
+}
+.propellerrule {
+	margin-right: auto;
+	margin-left: auto;
+	height: auto;
+	width: auto;
+
+}
+li a img {
+	display: inline-block;
+}
+.email{
+	font-weight: bold;
+	margin: 0px;
+}
+.rule {
+	margin: 20px auto;
+}
+.display-mnubiography {
+	display:none;
+}
+.image-swap-dimension {
+	width:150px;
+	height:82px;
+}
+.courtesy {
+	font-size: 60%;
+	margin-left:20px;
+}
+li a {
+	color: #F00 !important;
+	text-decoration:underline;
+}
+.menuButton a:visited {
+		color: #F00;
+}
+.menuButton {
+	position: relative;
+	width: 165px;
+	height: 85px;
+	font-variant: small-caps;
+	font-family: 'major_shift';
+	font-size: 110%;
+	line-height: 30px;
+	overflow:visible;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	z-index: 5;
+}
+ul#nav-biography, ul#nav-siteinfo {
+	display:none;
+	left: 0;
+	position: absolute;
+	top: 85px;
+	z-index: 1;
+}
+#references {
+	overflow: hidden;
+}
+
+#image-swap-experiment {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image:url(../images/Menu_Button_Experiment.png);
+	background-repeat: no-repeat;
+}
+#image-swap-experiment:hover {
+	background-position: 0px -93px;
+}
+#image-swap-experiment:active {
+	background-position: 0px -189px;
+}
+#image-swap-training {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Training.png);
+	background-repeat: no-repeat;
+}
+#image-swap-training:hover {
+	background-position: 0px -93px;
+}
+#image-swap-training:active {
+	background-position: 0px -189px;
+}
+#image-swap-airplanes {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Airplanes.png);
+	background-repeat: no-repeat;
+}
+#image-swap-airplanes:hover {
+	background-position: 0px -93px;
+}
+#image-swap-airplanes:active {
+	background-position: 0px -189px;
+}  
+#image-swap-biography  {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Biography.png);
+	background-repeat: no-repeat;
+}  
+#image-swap-biography:hover {
+	background-position: 0px -93px;
+}
+#image-swap-biography:active {
+	background-position: 0px -189px;
+}
+#image-swap-robinson {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Robinson.png);
+	background-repeat: no-repeat;
+}
+#image-swap-robinson:hover {
+	background-position: 0px -94px;
+}
+#image-swap-robinson:active {
+	background-position: 0px -189px;
+}
+#image-swap-floyd {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Floyd.png);
+	background-repeat: no-repeat;
+}
+#image-swap-floyd:hover {
+	background-position: 0px -93px;
+}
+#image-swap-floyd:active {
+	background-position: 0px -189px;
+}
+#image-swap-images {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Images.png);
+	background-repeat: no-repeat;
+}
+#image-swap-images:hover {
+	background-position: 0px -93px;
+}
+#image-swap-images:active {
+	background-position: 0px -189px;
+}
+#image-swap-blog {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Blog.png);
+	background-repeat: no-repeat;
+}
+#image-swap-blog:hover {
+	background-position: 0px -93px;
+}
+#image-swap-blog:active {
+	background-position: 0px -189px;
+}
+#image-swap-siteinfo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_SiteInfo.png);
+	background-repeat: no-repeat;
+}
+#image-swap-siteinfo:hover {
+	background-position: 0px -93px; 
+}
+#image-swap-siteinfo:active {
+	background-position: 0px -189px;
+}
+#image-swap-aboutus {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_AboutUs.png);
+	background-repeat: no-repeat;
+}
+#image-swap-aboutus:hover {
+	background-position: 0px -93px;
+}
+#image-swap-aboutus:active {
+	background-position: 0px -189px;
+}
+#image-swap-contactus {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_ContactUs.png);
+	background-repeat: no-repeat;
+}
+#image-swap-contactus:hover {
+	background-position: 0px -93px;
+}
+#image-swap-contactus:active {
+	background-position: 0px -189px;
+}
+#image-swap-references {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_References.png);
+	background-repeat: no-repeat;
+}
+#image-swap-references:hover {
+	background-position: 0px -93px;
+}
+#image-swap-references:active {
+	background-position: 0px -189px;
+}
+#image-swap-home {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/Menu_Button_Home.png);
+	background-repeat: no-repeat;
+}
+#image-swap-home:hover {
+	background-position: 0px -93px;
+}
+#image-swap-home:active {
+	background-position: 0px -189px;
+}
+#form {
+	margin: 0px auto;
+	width: 25%;
+}
+.image {
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.imageContainer {
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+
+} 
+.galleryItem {
+ 	color: #797478;    
+	font: 10px/1.5 Verdana, Helvetica, sans-serif;    
+	float: left;             
+	width: 20%;    
+	margin:  2% 2% 50px 2%
+}
+.galleryItem h3 {
+	text-transform: uppercase;
+}
+.galleryItem img {
+	max-width: 100%;
+}
+.for-chrome {
+	display:none;
+}
+cite {
+	font-size: 80%;
+	line-height: 90%;
+}
+#biblio {
+	margin-left: 2%;
+}
+p {
+	margin-right: 13px;
+	margin-left: 8px;
+}
+.submnu{
+	border-radius: 10px 10px;
+	background-color: #000;
+}
+#videowrapper {
+	float: none;
+	clear: both;
+	width: 100%;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+#videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#form p {
+	margin:0 auto;
+	width: 100%;
+}
+input[type=submit] {
+	display:block;
+	background-color:#999999;
+	margin:0 auto;
+	width: 75%;
+
+}
+.imgRedMontgomery {
+	background-color: #000;
+	margin:0 auto;
+}
+.contactUs {
+	width:100%;
+}
+h1.headerTitle {
+	position:relative;
+	width:1260px;
+	height:135px;
+	overflow:hidden;
+	text-transform: uppercase;
+	text-indent: -9999px;
+}
+span.headerTitle {
+	position:absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/header_s1.png);
+	background-repeat: none;
+}
+.required {
+	font-style: oblique;
+	}
